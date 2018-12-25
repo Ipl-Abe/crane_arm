@@ -1,0 +1,13 @@
+<launch>
+  <node name="joy_node" pkg="joy" type="joy_node" >
+   <param name="dev" type="string" value="/dev/input/js0" /></node>
+
+<node name="test_inverse" pkg="test" type="test_inverse">
+    <remap from="tilt1_cmd" to="tilt1_controller/command"/>
+    <remap from="tilt2_cmd" to="tilt2_controller/command"/>
+    <remap from="tilt3_cmd" to="tilt3_controller/command"/>
+    <remap from="tilt4_cmd" to="tilt4_controller/command"/>
+    <remap from="tilt5_cmd" to="tilt5_controller/command"/>
+</node>
+
+</launch>
